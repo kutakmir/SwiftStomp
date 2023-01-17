@@ -142,7 +142,7 @@ public class SwiftStomp{
 
 /// Public Operating functions
 public extension SwiftStomp{
-    func connect(headers: [String: String], timeout : TimeInterval = 5, acceptVersion : String = "1.1,1.2", autoReconnect : Bool = false){
+    func connect(headers: [String: String] = [:], timeout : TimeInterval = 5, acceptVersion : String = "1.1,1.2", autoReconnect : Bool = false){
         
         self.autoReconnect = autoReconnect
 
