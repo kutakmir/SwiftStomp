@@ -142,7 +142,7 @@ public class SwiftStomp{
 
 /// Public Operating functions
 public extension SwiftStomp{
-    func connect(timeout : TimeInterval = 5, acceptVersion : String = "1.1,1.2", autoReconnect : Bool = false){
+    func connect(headers: [String: String], timeout : TimeInterval = 5, acceptVersion : String = "1.1,1.2", autoReconnect : Bool = false){
         
         self.autoReconnect = autoReconnect
 
@@ -153,6 +153,10 @@ public extension SwiftStomp{
         }
         
         var urlRequest = URLRequest(url: self.host)
+        
+        headers.forEach { (key: String, value: String) in
+            urlRequest.setValue(value, forHTTPHeaderField: key)
+        }
         
         //** Accept Version
         self.acceptVersion = acceptVersion
