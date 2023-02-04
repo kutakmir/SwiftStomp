@@ -1,6 +1,6 @@
 # SwiftStomp
 
-## An elegent Stomp client for swift, Base on [Starscream](https://github.com/daltoniam/Starscream) websocket library.
+## An elegant Stomp client for swift, Base on [Starscream](https://github.com/daltoniam/Starscream) websocket library.
 
 <!-- [![CI Status](https://img.shields.io/travis/Romixery/SwiftStomp.svg?style=flat)](https://travis-ci.org/Romixery/SwiftStomp) -->
 [![Version](https://img.shields.io/cocoapods/v/SwiftStomp.svg?style=flat)](https://cocoapods.org/pods/SwiftStomp)
