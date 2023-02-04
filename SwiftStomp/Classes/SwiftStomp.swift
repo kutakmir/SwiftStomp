@@ -142,7 +142,7 @@ public class SwiftStomp{
 
 /// Public Operating functions
 public extension SwiftStomp{
-    func connect(headers: [String: String] = [:], timeout : TimeInterval = 5, acceptVersion : String = "1.1,1.2", autoReconnect : Bool = false){
+    func connect(headers: [String: String] = [:], timeout : TimeInterval = 5, acceptVersion : String = "1.1,1.2", autoReconnect : Bool = false, useCustomEngine: Bool = false){
         
         self.autoReconnect = autoReconnect
 
@@ -166,7 +166,7 @@ public extension SwiftStomp{
         
         
         //** Connect
-        self.socket = WebSocket(request: urlRequest)
+        self.socket = WebSocket(request: urlRequest, useCustomEngine: useCustomEngine)
         
         if let callbackQueue = self.callbacksThread{
             self.socket.callbackQueue = callbackQueue
